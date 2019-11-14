@@ -1,0 +1,15 @@
+{
+  "error":0,
+  "data":{
+      "userid": "111",
+      "token": "admin-token",
+      "roles": "admin",
+      "username": "admin",
+      "date": "11-05",
+      "avatar": "@image('200x200','red','#fff','avatar')",
+      "description": "@paragraph()",
+      "ip": "1",
+      "email": "111@qq.com"
+  }
+}
+
