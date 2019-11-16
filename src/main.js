@@ -8,12 +8,16 @@ import 'element-ui/lib/theme-chalk/index.css';
 import store from './store'
 
 
+
 import http from '@/assets/js/http'
 
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
+//引入弹框
+import MessageBox from '@/views/contanier'
+Vue.use(MessageBox)
 
 
 Vue.prototype.$http = http

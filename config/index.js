@@ -10,7 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    //默认proxyTable为[]
+    // proxyTable: {},
+    //配置跨域请求
+    proxyTable: {
+      '/api': {
+        // 测试环境
+        target: 'http://jr01.0791jr.com/',  // 接口域名
+        changeOrigin: true,  //是否跨域
+        pathRewrite: {
+            '^/api': ''   //需要rewrite重写的,
+        }              
+      }
+
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -64,7 +77,7 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
+    productionGzip: true,
     productionGzipExtensions: ['js', 'css'],
 
     // Run the build command with an extra argument to
